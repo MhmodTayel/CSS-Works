@@ -1,1 +1,1 @@
-! [] (yin-yang.gif)
+![](yin-yang.gif)
