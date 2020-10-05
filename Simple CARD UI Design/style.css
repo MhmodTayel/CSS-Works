@@ -1,6 +1,4 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-</style>
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 * {
   margin: 0;
@@ -10,7 +8,7 @@
 
 body {
   background: #262626;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .center {
