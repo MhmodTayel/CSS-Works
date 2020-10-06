@@ -53,6 +53,7 @@ a::after {
   text-align: center;
   transition: 0.5s;
   letter-spacing: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a:hover::before {
