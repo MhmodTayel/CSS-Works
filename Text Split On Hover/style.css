@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+
+  letter-spacing: 10px;
+  font-size: 10em;
+}
+
+h1::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "split";
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 55%, 0 55%);
+  transition: .5s;
+}
+
+h1::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "split";
+  color:#fff;
+  clip-path: polygon(0 54%, 100% 54%, 100% 100%, 0 100%);
+  transition: .5s;
+}
+
+h1:hover::before {
+  transform: translateY(-20px);
+}
+
+h1:hover::after {
+  transform: translateY(20px);
+}

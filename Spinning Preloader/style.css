@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border-radius: 50%;
+  border-right: 2px solid #222;
+  border-bottom: 2px solid #222;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  animation: animate 1s linear infinite;
+}
+
+.circle:nth-child(1) {
+  left: -32px;
+  top: -33px;
+  width: 70px;
+  height: 70px;
+  transform: rotate(-45deg);
+  animation-delay: 0.1s;
+}
+
+.circle:nth-child(2) {
+  left: -22px;
+  top: -22px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-90deg);
+  animation-delay: 0.2s;
+  animation: animateReverse 1s linear infinite;
+}
+
+.circle:nth-child(3) {
+  left: -11px;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+  transform: rotate(-135deg);
+  animation-delay: 0.3s;
+}
+
+.circle:nth-child(4) {
+  left: -47px;
+  top: -45px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-135deg);
+  animation-delay: 0.4s;
+  animation: animateReverse 1s linear infinite;
+}
+
+.dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #222;
+  border-radius: 50%;
+}
+
+h2 {
+  position: absolute;
+  top: 76px;
+  left: -45px;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+h2::before {
+  content: ".";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  font-size: 18px;
+  animation: animateDot 1s linear infinite;
+}
+
+h2::after {
+  content: ".";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  font-size: 18px;
+  animation: animateDot 1s linear infinite;
+  animation-delay: .5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animateReverse {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes animateDot {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 10px;
+}
+
+ul li a {
+  position: relative;
+  display: block;
+  line-height: 40px;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #222;
+  transform: rotate(45deg);
+  margin: 8px;
+  text-align: center;
+  color: #262626;
+  transition: 0.2s;
+}
+
+ul li a .fab {
+  transform: rotate(-45deg);
+}
+
+ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 105%;
+  height: 100%;
+  background-color: #262626;
+  transition: 0.2s;
+}
+
+ul li a:hover::before {
+  bottom: 0;
+}
+
+ul li a:hover .fab {
+  color: #fff;
+}
+
+ul li:nth-child(1) a::before {
+  background: #1877f2;
+}
+
+ul li:nth-child(2) a::before {
+  background: #1da1f2;
+}
+
+ul li:nth-child(3) a::before {
+  background: #007bb6;
+}
+
+ul li:nth-child(4) a::before {
+  background: #ff0000;
+}
+
+ul li:nth-child(5) a::before {
+  background: #bc2a8d;
+}

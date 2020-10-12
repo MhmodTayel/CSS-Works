@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #262626;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 160px;
+  font-size: 80px;
+  overflow: hidden;
+}
+
+.circle .fas {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-50px);
+    text-shadow: 0 50px #fff;
+  }
+  20% {
+    transform: translateY(0px);
+    text-shadow: 0 10px #fff;
+  }
+  40% {
+    transform: translateY(0px);
+    text-shadow: 0 -10px #fff;
+  }
+  60% {
+    transform: translateY(0px);
+    text-shadow: 0 50px #fff;
+  }
+  100% {
+    transform: translateY(150px);
+    text-shadow: 0 -50px #fff;
+  }
+}
+
+.circle::before {
+  content: "SCROLL DOWN";
+  position: absolute;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  left: 25px;
+  top: 35px;
+}
