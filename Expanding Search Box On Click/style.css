@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(45deg, rgb(13, 243, 13), rgb(13, 210, 245));
+  width: 100%;
+  height: 100vh;
+}
+
+.search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  transition: width 0.5s;
+  overflow: hidden;
+}
+.search.active {
+  width: 600px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  cursor: pointer;
+  color: #262626;
+  transition: 0.5s;
+}
+
+.icon.left {
+  color: rgba(255, 0, 0, 0.87);
+  left: 93%;
+}
+
+.search input {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 90px);
+  height: 60px;
+  border: none;
+  outline: none;
+  font-size: 36px;
+  padding: 0 10px;
+  color: #666;
+}
+
+::placeholder {
+  font-size: 30px;
+}
