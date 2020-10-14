@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: sans-serif;
+}
+
+body {
+  background: #fff;
+}
+
+.checkbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 40px;
+  /* background: #ccc; */
+  border-radius: 4px;
+}
+
+.checkbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+}
+
+.checkbox div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #000;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  /* box-sizing: border-box; */
+  overflow: hidden;
+}
+
+.checkbox div .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  transition: 0.5s;
+  
+}
+
+.checkbox input:checked + div .slide {
+  transform: translateX(60px);
+}
+
+.checkbox .slide::before {
+  content: "\f1ce  ON ";
+  position: absolute;
+  top: 0;
+  left: -60px;
+  text-align: center;
+  width: 60px;
+  height: 100%;
+  line-height: 40px;
+  font-size: 16px;
+  font-family: fontAwesome, sans-serif;
+  background: #00da00;
+  color: #fff;
+}
+
+.checkbox .slide::after {
+  content: "\f011  OFF ";
+  position: absolute;
+  top: 0;
+  left: 40px;
+  text-align: center;
+  width: 60px;
+  height: 100%;
+  font-size: 16px;
+  line-height: 40px;
+  font-family: fontAwesome, sans-serif;
+  background: rgba(230, 13, 13, 0.938);
+  color: #fff;
+}
