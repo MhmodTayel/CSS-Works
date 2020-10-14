@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.progress {
+  height: 30px;
+  width: 300px;
+  border-radius: 20px;
+  background: #d8d8d8;
+}
+
+.progress-done {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 3px -5px rgb(82, 240, 9), 0 2px 5px rgb(82, 240, 9);
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  color: #fff;
+
+  background: linear-gradient(to left, rgb(82, 240, 9), rgb(11, 233, 122));
+  border-radius: 20px;
+  transition: 1s ease;
+}
