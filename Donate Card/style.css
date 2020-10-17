@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff5f3;
+  font-family: "Mulish", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.box {
+  position: relative;
+  background: #fff;
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  bottom: -30px;
+  right: -30px;
+  background: #ff3d44;
+  border-radius: 30px;
+  z-index: -1;
+  opacity: 0.9;
+}
+.box img {
+  margin-top: -70px;
+  margin-bottom: 10px;
+  display: block;
+  width: 50px;
+}
+
+.box h2 {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.box p {
+  line-height: 24px;
+}
+
+.btn {
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+  transition: .2s;
+}
+
+.btn.paypal {
+  background-color: #0070ba;
+  margin-right: 10px;
+}
+
+.btn.patreon {
+  background-color: rgb(232, 91, 70);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(.9);
+}
