@@ -10,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-direction: column;
 }
 
 body.light {
@@ -166,8 +167,23 @@ body.light .min::before {
   color: #f39c12;
 }
 
-.toggle {
+/* .toggle {
   position: absolute;
   left: 734px;
   top: 618px;
+} */
+
+#digitalClock {
+  font-size: 3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-right: -1.5rem;
+  color:  #d1dae3 ;
+}
+
+#digitalClock,.clock {
+  margin-bottom: 3rem;
+}
+
+body.light #digitalClock{
+   color: #333;
 }
