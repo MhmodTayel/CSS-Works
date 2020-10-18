@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Analog Clock UI LIGHT-DARK</title>
   </head>
-  <body>
+  <body class="light">
     <div class="clock">
       <div class="hour">
         <div id="hr" class="hr"></div>
@@ -22,7 +22,15 @@
         <div id="sec" class="sec"></div>
       </div>
     </div>
-
+    <div class="toggle">
+      <input type="checkbox" name="check" id="checkbox" class="checkbox" />
+      <label for="checkbox" class="label">
+        <i class="far fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+ 
     <script src="main.js"></script>
   </body>
 </html>

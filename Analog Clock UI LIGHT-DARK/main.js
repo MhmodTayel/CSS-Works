@@ -13,3 +13,10 @@ setInterval(() => {
   min.style.transform = `rotateZ(${minute}deg)`;
   sec.style.transform = `rotateZ(${second}deg)`;
 });
+
+
+const checkbox = document.getElementById("checkbox");
+
+checkbox.addEventListener("change", function () {
+  document.body.classList.toggle("light");
+});

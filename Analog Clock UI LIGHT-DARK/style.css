@@ -12,19 +12,33 @@ body {
   min-height: 100vh;
 }
 
+body.light {
+  background: #d1dae3;
+}
+
 .clock {
   width: 350px;
   height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(./img/clock.png);
+  background: #091921 url(./img/clock.png);
   background-size: cover;
   border: 4px solid #091921;
   border-radius: 50%;
   box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
     inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3),
     inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.light .clock {
+  background: #d1dae3 url(./img/clock-dark.png);
+  background-size: cover;
+  border: 4px solid #cad3dc;
+  box-shadow: -8 -8px 15px rgba(255, 255, 255, 0.5),
+    10 10px 10px rgba(0, 0, 0, 0.1),
+    inset -8px -8px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .clock::before {
@@ -35,6 +49,10 @@ body {
   background: #fff;
   border-radius: 50%;
   z-index: 1000;
+}
+
+body.light .clock::before {
+  background: #008eff;
 }
 
 .clock .hour,
@@ -68,11 +86,14 @@ body {
   justify-content: center;
   /* align-items: center; */
   border-radius: 50%;
-  
 }
 
 .min {
-  transition: 1s;
+  /* transition: 1s; */
+}
+
+body.light .min::before {
+  background: #091921;
 }
 
 .hr::before {
@@ -100,7 +121,53 @@ body {
   position: absolute;
   width: 2px;
   height: 150px;
-  background: #fff;
+  background: #008eff;
   z-index: 12;
   border-radius: 6px 6px 0 0;
+}
+
+.label {
+  background-color: #111;
+  display: flex;
+  height: 26px;
+  width: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  border-radius: 50px;
+  transform: scale(1.5);
+}
+
+.ball {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s linear;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.toggle {
+  position: absolute;
+  left: 734px;
+  top: 618px;
 }
