@@ -26,3 +26,63 @@ body {
   border-radius: 20px;
   background: linear-gradient(135deg, #d41e31, #491f8f);
 }
+
+.card img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 400px;
+  transition: 0.5s;
+}
+
+.card:hover img {
+  height: 500px;
+  left: 80%;
+}
+
+.content {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  padding: 20px 20px 20px 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.card:hover .content {
+  opacity: 1;
+  visibility: visible;
+  left: 0%;
+}
+
+.card .content h2 {
+  color: #fff;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+
+.card .content p {
+  color: #fff;
+}
+
+.card .content a {
+  position: relative;
+  display: inline-block;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #fff;
+  margin-top: 15px;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.card .content a:hover {
+  background: linear-gradient(135deg, #491f8f, #d41e31);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 5px 10px 5px rgba(0, 0, 
+  0, .3);
+}
