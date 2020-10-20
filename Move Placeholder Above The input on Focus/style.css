@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #fead06, #c00def);
+}
+
+.container {
+  position: relative;
+  padding: 70px 40px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+  color: #111;
+  margin-bottom: 24px;
+  line-height: 1em;
+  font-weight: 500;
+  padding-left: 10px;
+  border-left: 5px solid #e91e63;
+}
+
+.container .inputBox {
+  position: relative;
+  width: 300px;
+  height: 46px;
+  margin-bottom: 35px;
+}
+
+.container .inputBox:last-child {
+  margin-bottom: 0;
+}
+
+.container .inputBox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid rgba(51, 51, 51, 0.527);
+  background: transparent;
+  padding: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+  color: #111;
+  font-weight: 300;
+}
+
+.container .inputBox span {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  padding: 10px;
+  display: inline-block;
+  font-size: 16px;
+  color: #111;
+  font-weight: 300;
+  pointer-events: none;
+  transition: .5s;
+  /* z-index: -1; */
+}
+
+.container .inputBox input:focus ~ span, 
+.container .inputBox input:valid ~ span {
+  top: -35px;
+  left: -15px;
+  transform: scale(.8);
+}
+/* 
+.container .inputBox input[type='email']:enabled ~ span
+{
+  top: -35px;
+  left: -15px;
+  transform: scale(.8);
+
+ 
+}
+ */
+
+ /* THERE IS A PROBLEM IN EMAIL CONTROL */
+
+ .container .inputBox input[type='submit'] {
+   background: #2196f3;
+   border: none;
+   max-width: 120px;
+   cursor: pointer;
+   font-weight: 500;
+   color: #fff;
+  transition: .2s;
+ }
+
+ .container .inputBox input[type='submit']:hover {
+   background: #e91e63;
+ }
