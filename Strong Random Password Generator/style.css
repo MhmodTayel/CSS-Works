@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.inputBox {
+  position: relative;
+  width: 450px;
+}
+
+.inputBox h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.inputBox input {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  border: none;
+  margin: 10px 0 20px;
+  background: transparent;
+  outline: none;
+  padding: 0 20px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #333;
+  box-shadow: -4px -4px 10px #fff,
+    inset 4px 4px 10px rgba(0, 0, 0, 0.05), inset -4px -4px 10px #fff, 4px 4px
+      10px rgba(0, 0, 0, 0.05);
+}
+
+.inputBox input::placeholder {
+  letter-spacing: 0;
+}
+
+.inputBox #btn {
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  background: #333;
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: .2s;
+}
+
+.inputBox #btn:active {
+  background: #297cb0;
+}
