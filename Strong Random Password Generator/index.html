@@ -14,6 +14,11 @@
     <div class="inputBox">
       <h2>Random Password Generator App</h2>
       <input type="text" placeholder="Create Password" id="password" readonly />
+      <div class="slide">
+        <input type="range" name="" id="range" min="4" max="36" value="16" onchange="change();"/>
+        <span class="Value"></span>
+      </div>
+
       <div id="btn" onclick="getPassword();">Generate Password</div>
     </div>
     <script src="main.js"></script>
