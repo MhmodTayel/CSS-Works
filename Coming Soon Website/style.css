@@ -163,8 +163,8 @@ section .imgBx img {
 
 .action {
   position: fixed;
-  bottom: 50px;
-  left: 50px;
+  bottom: 22px;
+  left: 22px;
   width: 50px;
   height: 50px;
   background: #fff;
@@ -383,9 +383,7 @@ i {
     padding: 10px 15px;
   }
 
-  .action {
-    bottom: 100px;
-  }
+
 
   .newsletter {
     width: 488px;
