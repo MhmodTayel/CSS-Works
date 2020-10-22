@@ -170,7 +170,8 @@ section .imgBx img {
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  z-index: 10000000;
+  z-index: 100000;
+  
 }
 
 .action span {
@@ -385,6 +386,33 @@ i {
   .action {
     bottom: 100px;
   }
+
+  .newsletter {
+    width: 488px;
+    padding: 38px;
+
+}
+
+.newsletter h2 {
+  font-size: 37px;
+}
+
+.newsletter p {
+  font-size: 16px;
+}
+
+.newsletter .inputBox input {
+  padding: 8px;
+  width:300px;
+  font-size: 14px;
+}
+
+.newsletter .inputBox input[type='submit'] {
+  right: 144px;
+  padding: 8px;
+  width: 111px;
+}
+
 }
 
 @media (max-width: 600px) {
@@ -411,6 +439,34 @@ i {
     bottom: 2px;
     left: 25px;
   }
+
+  .newsletter {
+    width: 380px;
+    padding: 38px;
+
+}
+
+.newsletter h2 {
+  font-size: 33px;
+}
+
+.newsletter p {
+  font-size: 14px;
+}
+
+.newsletter .inputBox input {
+  padding: 8px;
+  width: 300px;
+  font-size: 14px;
+}
+
+.newsletter .inputBox input[type='submit'] {
+  right: 20px;
+  padding: 8px;
+  width: 111px;
+}
+
+
 }
 
 @media (max-width: 380px) {
@@ -418,6 +474,38 @@ i {
     bottom:42px;
     left: 15;
   }
+  .newsletter {
+    width: 220px;
+    padding: 38px;
+    height: 240px;
+
+}
+
+.newsletter h2 {
+  font-size: 24px;
+}
+
+.newsletter p {
+  font-size: 12px;
+}
+
+.newsletter .inputBox input {
+  padding: 8px;
+  width: 160px;
+  margin-left: -9px;
+  font-size: 14px;
+}
+
+.newsletter .inputBox input[type='submit'] {
+  display: block;
+  right: 20px;
+  padding: 8px;
+  width: 111px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 1px;
+  margin-top: 10px;
+}
 
 
 }
