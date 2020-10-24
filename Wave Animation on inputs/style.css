@@ -16,6 +16,10 @@ body {
   flex-direction: column;
 }
 
+h1 {
+  margin-bottom: 20px;
+}
+
 .form-control {
   position: relative;
   width: 300px;
@@ -23,5 +27,34 @@ body {
 }
 
 .form-control input {
- 
+ border: 0;
+ border-bottom: 2px solid #333;
+ padding: 15px 0;
+ width: 100%;
+ display: block;
+ font-family: inherit;
+ font-size: 18px;
+ outline: none;
+ transition: .2s;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  border-bottom-color: darksalmon;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  font-size: 18px;
+  filter: opacity(.7);
+  transition: color .2s, transform .2s;
+}
+
+.form-control input:focus + label, 
+.form-control input:valid + label {
+  color: darksalmon;
+  transform: translate(-10px,-28px)scale(.8);
+  filter: opacity(1);
 }
