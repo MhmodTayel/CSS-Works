@@ -10,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-direction: column;
 }
 
 .box {
@@ -37,6 +38,12 @@ body {
   height: 20px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background-color: #222;
-  border: 20px solid #2196f3;
+  background-color:#000;
+  border: 20px solid #634e34;
   
+}
+
+img {
+  margin-top: -50#634e34px;
+  width: 400px;
+}
